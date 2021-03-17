@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:st_mgt_shop_app/providers/cart.dart';
 import 'package:st_mgt_shop_app/providers/orders.dart';
 import 'package:st_mgt_shop_app/providers/products.dart';
+import 'package:st_mgt_shop_app/screens/auth_screen.dart';
 import 'package:st_mgt_shop_app/screens/cart_screen.dart';
 import 'package:st_mgt_shop_app/screens/edit_product_screen.dart';
 import 'package:st_mgt_shop_app/screens/orders_screen.dart';
@@ -36,8 +37,10 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.deepOrange,
           fontFamily: 'Lato',
         ),
-        home: ProductsOverviewScreen(),
+        //home: ProductsOverviewScreen(),
+        home: AuthScreen(),
         routes: {
+          //ProductsOverviewScreen.routeName: (ctx) => ProductsOverviewScreen(),
           ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
           CartScreen.routeName: (ctx) => CartScreen(),
           OrdersScreen.routeName: (ctx) => OrdersScreen(),
