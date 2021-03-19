@@ -26,6 +26,8 @@ class Orders with ChangeNotifier {
   }
 
   Future<void> fetchAndSetOrders() async {
+    // const url = Uri.https('<domain>', '/<path>')
+    //final url = Uri.https('shopapp-1a7a6-default-rtdb.firebaseio.com', '/orders.json');
     const url = 'https://shopapp-1a7a6-default-rtdb.firebaseio.com/orders.json';
     final response = await http.get(url);
     //print(json.decode(response.body));
@@ -59,6 +61,8 @@ class Orders with ChangeNotifier {
 
   Future<void> addorder(List<CartItem> cartProducts, double total) async {
     const url = 'https://shopapp-1a7a6-default-rtdb.firebaseio.com/orders.json';
+    // const url = Uri.https('<domain>', '/<path>')
+    //final url = Uri.https('shopapp-1a7a6-default-rtdb.firebaseio.com', '/orders.json');
     final timeStamp = DateTime.now();
     final response = await http.post(
       url,

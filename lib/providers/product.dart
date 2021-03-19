@@ -29,6 +29,8 @@ class Product with ChangeNotifier {
     final oldStatus = isFavorite;
     isFavorite = !isFavorite;
     notifyListeners();
+    //const url = Uri.https('<domain>', '/<path>')
+    //final url = Uri.https('shopapp-1a7a6-default-rtdb.firebaseio.com', '/products/$id.json');
     final url =
         'https://shopapp-1a7a6-default-rtdb.firebaseio.com/products/$id.json';
     try {
